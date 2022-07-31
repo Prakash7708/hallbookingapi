@@ -12,9 +12,9 @@ app.use(cors());
 // }))
 app.use(bodyParser.json());
 app.use(cors())
-const port = process.env.PORT || 3000;
+// const port = process.env.PORT || 3000;
 
-app.listen(port, () => console.log(`Your app is running with ${port}`));
+// app.listen(port, () => console.log(`Your app is running with ${port}`));
 
 let rooms = [];
 let roomNo = 0;
@@ -135,6 +135,11 @@ app.post("/BookRoom", function (req, res) {
    res.status(200).json({ output: 'Room Booking Successfully'}) 
 }
 });
+
+
+
+
+app.listen(process.env.PORT || 3001)
 
 // const express=require('express')
 // const app=express()
